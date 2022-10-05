@@ -16,8 +16,9 @@ mkdir acre-trader-challenge
 # Set current working directory to the new directory
 cd acre-trader-challenge
 
-# Set up an isolated pip environment with django 4.1.1 specifically
+# Set up an isolated pip environment with django and djangorestframework
 pipenv install django==4.1.1
+pipenv install djangorestframework==3.14.0
 
 # Start using the pipenv context
 pipenv shell
@@ -29,7 +30,7 @@ django-admin
 pipenv --venv
 
 # Generate a new django project in root directory
-django-admin startproject todos_for_acres .
+django-admin startproject todo_project .
 ```
 
 ## Setup github repository
