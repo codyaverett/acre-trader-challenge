@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # container names
-DB_CONTAINER_NAME="todo-db"
-DB_ADMIN_CONTAINER_NAME="todo-db-pgadmin"
+DB_CONTAINER_NAME="todo_app_db"
+DB_ADMIN_CONTAINER_NAME="todo_app_pgadmin"
 
 # Get current working directory
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -34,7 +34,7 @@ docker rm -f $DB_CONTAINER_NAME $DB_ADMIN_CONTAINER_NAME > /dev/null
 
 # Create temporary directory for postgres data if it doesn't exist
 # This is where the database data will be stored
-LOCAL_DATA_DIR="$DIR/$DB_CONTAINER_NAME-data"
+LOCAL_DATA_DIR="$DIR/$DB_CONTAINER_NAME"
 mkdir -p $LOCAL_DATA_DIR
 
 # Run postgres container

@@ -2,7 +2,7 @@
 .env
 
 # Temporary data files
-todo-db-data
+todo_app_db/
 __pycache__/
 data/
 tmp/
