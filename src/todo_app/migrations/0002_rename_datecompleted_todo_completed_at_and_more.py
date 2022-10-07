@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('todo', '0001_initial'),
+        ('todo_app', '0001_initial'),
     ]
 
     operations = [
@@ -31,7 +31,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='todo',
             name='created_by',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(
+                blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL),
         ),
         migrations.AddField(
             model_name='todo',
@@ -41,11 +42,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TodoList',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=100)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('created_by', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('todo', models.ManyToManyField(blank=True, to='todo.todo')),
+                ('created_by', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('todo', models.ManyToManyField(blank=True, to='todo_app.todo')),
             ],
         ),
     ]

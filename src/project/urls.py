@@ -23,5 +23,5 @@ urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='api/v1/', permanent=False)),
-    path('api/v1/', include('todo.urls')),
+    path('api/v1/', include('todo_app.urls')),
 ]
