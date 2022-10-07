@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Todo, TodoList
+from ..models import Todo, TodoList
 
 
 def home(request):
