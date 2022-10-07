@@ -12,6 +12,7 @@ django-debug-toolbar = "*"
 autopep8 = "*"
 pytest = "*"
 requests = "*"
+django-extensions = "*"
 
 [dev-packages]
 autopep8 = "*"
