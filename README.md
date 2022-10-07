@@ -12,24 +12,25 @@ The service should provide valid and appropriate HTTP responses for the type of 
 I am free to use any number of libraries and frameworks that I see fit to use.
 
 ### Required
-- [ ] Create a to-do record by specifying the description and desired date and time of completion.
-- [ ] Retrieve a list of to-do records.
-- [ ] Update a to-do record with new values for meaningful fields.
-- [ ] Delete a to-do record.
+- [x] Create a to-do record by specifying the description and desired date and time of completion.
+- [x] Retrieve a list of to-do records.
+- [x] Update a to-do record with new values for meaningful fields.
+- [x] Delete a to-do record.
 
 ### Optional
-- [ ] Filtering, searching, and sorting to-do records by meaningful fields.
-- [ ] Implement some level of authentication, whether at the HTTP, app, or some other level.
+- [x] Filtering, searching, and sorting to-do records by meaningful fields. (Provided through the Admin panel)
+- [x] Implement some level of authentication, whether at the HTTP, app, or some other level.
 
 ## Extra
-- [ ] Create lists of todos
+- [x] Create lists of todos so it's not just one big list
+- [x] Configured Admin panel with Todos and TodoLists being searchable, and sortable.
 
 ## Technologies used
 - Python 3
 - Django
 - Django Rest Framework
 - Django Debug Toolbar
-- Shell scripting
+- Shell scripts
 - Docker
 - Postgres database (container)
 - Postgres admin (container)
@@ -61,5 +62,5 @@ POSTGRES_PORT=5432
 
 ## Tools
 
-Django Admin - http://127.0.0.1:9000/admin/
-Postgres Admin - http://127.0.0.1:5050/
+- Django Admin - http://127.0.0.1:9000/admin/
+- Postgres Admin - http://127.0.0.1:5050/
