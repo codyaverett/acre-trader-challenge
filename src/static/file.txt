@@ -1,3 +1,0 @@
-test file
-
-This file can be accessed at http://127.0.0.1:9001/static/file.txt
