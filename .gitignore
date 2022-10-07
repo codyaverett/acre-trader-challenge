@@ -1,2 +1,12 @@
+# Development environment variables
+.env
+
+# Temporary data files
+todo-db-data
+__pycache__/
+data/
+tmp/
+log/
+*.log 
 *.sqlite3
-*.log
+.venv
