@@ -21,10 +21,14 @@ I am free to use any number of libraries and frameworks that I see fit to use.
 - [ ] Filtering, searching, and sorting to-do records by meaningful fields.
 - [ ] Implement some level of authentication, whether at the HTTP, app, or some other level.
 
+## Extra
+- [ ] Create lists of todos
+
 ## Technologies used
 - Python 3
 - Django
 - Django Rest Framework
+- Django Debug Toolbar
 - Shell scripting
 - Docker
 - Postgres database (container)
@@ -40,6 +44,8 @@ There are only a few steps required before local development can be started on a
 ### Postgres Database
 For local development you will need to have docker, Optionally, you can use a basic sqllite db for development.  I'm not using any postgres specific features right now, but I am using postgres to demonstrate my familiarity with containers.
 
+I use the `src/start_db.sh` script to download and run the latest postgres and postgres admin container images. The script also sources from the local `src/.env` file for basic postgres configurations.
+
 ### Environment Variable configurations
 Certain Environment variables are required for the application to start.  If they aren't defined on the system the Django application will error out.
 
@@ -52,3 +58,8 @@ POSTGRES_DB=todo
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
 ```
+
+## Tools
+
+Django Admin - http://127.0.0.1:9000/admin/
+Postgres Admin - http://127.0.0.1:5050/
