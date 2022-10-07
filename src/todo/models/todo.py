@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from rest_framework import serializers
 
 
 class Todo(models.Model):
@@ -17,3 +18,11 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        ordering = ['updated_at']
+        
+class TodoSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Todo
+        fields = ('id', 'title', 'detail', 'created_at', 'completed_at', 'updated_at', 'created_by', 'important')
