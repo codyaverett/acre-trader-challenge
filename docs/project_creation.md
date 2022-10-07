@@ -92,6 +92,11 @@ Running migrations:
 Ensure all migration operations have been completed already via `python3 manage.py migrate`
 
 ```bash
+# Oneliner to create a simple admin user, will prompt for password
+python manage.py createsuperuser --email admin@example.com --username admin
+```
+
+```bash
 ~/Projects/jobs/acre-trader-challenge (main) » python manage.py createsuperuser
 Username (leave blank to use 'caavere'): 
 Email address: codyaverett@gmail.com
