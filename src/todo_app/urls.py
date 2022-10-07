@@ -9,6 +9,4 @@ router.register(r'todolists', views.TodoListViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('app/', views.app, name='app'),
-    path('home/', views.home, name='home'),
 ]

@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
     'todo_app',
+    'todo_site',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +90,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
+REST_FRAMEWORK = {
+    'COERCE_DECIMAL_TO_STRING': False,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

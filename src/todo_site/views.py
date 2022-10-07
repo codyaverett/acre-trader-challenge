@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from ..models import Todo, TodoList
+from todo_app.models import Todo, TodoList
 
 
-def home(request):
-    return render(request, 'home.html', {
+def site(request):
+    return render(request, 'site.html', {
         'todos': Todo.objects.all(),
         'todo_lists': TodoList.objects.all(),
     })
