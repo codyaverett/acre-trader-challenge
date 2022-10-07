@@ -22,7 +22,3 @@ class Todo(models.Model):
     class Meta:
         ordering = ['updated_at']
         
-class TodoSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Todo
-        fields = ('id', 'title', 'detail', 'created_at', 'completed_at', 'updated_at', 'created_by', 'important')

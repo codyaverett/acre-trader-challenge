@@ -22,8 +22,3 @@ class TodoList(models.Model):
     
     class Meta:
         ordering = ['title']
-
-class TodoListSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = TodoList
-        fields = ('id', 'title', 'todo', 'updated_at', 'created_by')
