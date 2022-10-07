@@ -1,0 +1,19 @@
+<html doctype>
+  <html>
+    <head>
+      <title>My Millionth Web Page</title>
+    </head>
+    <body>
+      <h1>My Millionth Web Page</h1>
+      <p>My second Paragraph</p>
+      {% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %} {#
+      this won't be rendered #} Todos {{ todos.count }} {% if todos.count %}{%
+      for todo in todos %}{% endif %}
+
+      <p>Rendered text with {{ pub_date|date:"c" }}</p>
+      {% comment "Optional note" %}
+      <p>Commented out text with {{ create_date|date:"c" }}</p>
+      {% endcomment %}
+    </body>
+  </html>
+</html>
