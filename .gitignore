@@ -2,10 +2,9 @@
 .env
 
 # Temporary data files
-todo_app_db/
 __pycache__/
+.todo_app_db/
 .pytest_cache/
-data/
 tmp/
 log/
 *.log 

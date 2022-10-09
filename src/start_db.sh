@@ -14,10 +14,10 @@ set +o allexport
 
 # Function to expect env variables to be set
 function expect_env() {
-  if [ -z "${!1}" ]; then
-    echo "ERROR: $1 is not set"
-    exit 1
-  fi
+    if [ -z "${!1}" ]; then
+        echo "ERROR: $1 is not set"
+        exit 1
+    fi
 }
 
 # Use expect_env function to check if required env variables are set
@@ -34,35 +34,35 @@ docker rm -f $DB_CONTAINER_NAME $DB_ADMIN_CONTAINER_NAME > /dev/null
 
 # Create temporary directory for postgres data if it doesn't exist
 # This is where the database data will be stored
-LOCAL_DATA_DIR="$DIR/$DB_CONTAINER_NAME"
+LOCAL_DATA_DIR="$DIR/.$DB_CONTAINER_NAME"
 mkdir -p $LOCAL_DATA_DIR
 
 # Run postgres container
 # with a local volume for data persistence
 # and a local port for access
 docker run -d \
-  --name $DB_CONTAINER_NAME \
-  -e POSTGRES_DB=$POSTGRES_DB \
-  -e POSTGRES_USER=$POSTGRES_USER \
-  -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
-  -v $LOCAL_DATA_DIR:/var/lib/postgresql/data \
-  -p 5432:5432 \
-  postgres
+--name $DB_CONTAINER_NAME \
+-e POSTGRES_DB=$POSTGRES_DB \
+-e POSTGRES_USER=$POSTGRES_USER \
+-e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
+-v $LOCAL_DATA_DIR:/var/lib/postgresql/data \
+-p 5432:5432 \
+postgres
 
 # Run pgadmin container
 # with a local port for access
 docker run -d \
-  --name $DB_ADMIN_CONTAINER_NAME \
-  -e PGADMIN_DEFAULT_USER=$POSTGRES_USER \
-  -e PGADMIN_DEFAULT_EMAIL=$POSTGRES_USER@local.com \
-  -e PGADMIN_DEFAULT_PASSWORD=$POSTGRES_PASSWORD \
-  -p 5050:80 \
-  dpage/pgadmin4
+--name $DB_ADMIN_CONTAINER_NAME \
+-e PGADMIN_DEFAULT_USER=$POSTGRES_USER \
+-e PGADMIN_DEFAULT_EMAIL=$POSTGRES_USER@local.com \
+-e PGADMIN_DEFAULT_PASSWORD=$POSTGRES_PASSWORD \
+-p 5050:80 \
+dpage/pgadmin4
 
 # Wait for postgres to start
 while ! docker exec $DB_CONTAINER_NAME pg_isready > /dev/null 2>&1; do
-  echo "Waiting for postgres to start..."
-  sleep 1
+    echo "Waiting for postgres to start..."
+    sleep 1
 done
 
 # Print success message
@@ -78,7 +78,7 @@ echo "Database: $POSTGRES_DB"
 echo "User: $POSTGRES_USER"
 echo "Password: $POSTGRES_PASSWORD"
 echo "Local IP: $(ipconfig getifaddr en0)"
-echo "Connection String: postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@localhost:5432/$POSTGRES_DB" 
-echo 
+echo "Connection String: postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@localhost:5432/$POSTGRES_DB"
+echo
 echo "Access pgAdmin at http://localhost:5050 as $POSTGRES_USER@local.com with password '$POSTGRES_PASSWORD'"
 echo "--------------------------------------------------"
