@@ -4,6 +4,7 @@
 # Temporary data files
 todo_app_db/
 __pycache__/
+.pytest_cache/
 data/
 tmp/
 log/
