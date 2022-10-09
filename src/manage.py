@@ -2,18 +2,15 @@
 """Django's command-line utility for administrative tasks."""
 import sys
 from os import path, environ
-from dotenv import read_dotenv
+from dotenv import load_dotenv
 
 
 def main():
     """Run administrative tasks."""
 
-    # TODO: This method of loading environment variables triggers for tests
-    #       and is not ideal.  Find a way to handle this in pytest
-    #       or find a better way to load environment variables e.g. in pytest.ini
-    # Load dotenv file from the project root directory
+    # Load dotenv file from the project src directory
     dotenv_file = path.join(path.join(path.dirname(__file__), '.env'))
-    read_dotenv(dotenv_file, override=True)
+    load_dotenv(dotenv_file, override=True)
 
     environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
     try:
