@@ -1,6 +1,11 @@
 from sys import exit
 from os import environ
 
+# I published a derivative of this code as a package on PyPI:
+# https://pypi.org/project/required-env/
+# Notes on how I did it:
+# https://github.com/codyaverett/memento/blob/main/programming/python/create%20a%20minimal%20python%20package.md
+
 
 def load_required_envars(required_envars: list) -> dict:
     """ 
