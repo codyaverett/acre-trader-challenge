@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
     'todo_app',
-    'todo_site',
 ]
 
 MIDDLEWARE = [
