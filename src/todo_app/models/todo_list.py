@@ -11,6 +11,7 @@ class TodoList(models.Model):
     title = models.CharField(max_length=100)
     todo = models.ManyToManyField(Todo, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
 
     def __str__(self):
