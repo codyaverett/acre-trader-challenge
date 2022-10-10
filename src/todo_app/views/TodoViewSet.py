@@ -16,4 +16,4 @@ class TodoViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
     lookup_field = "id"
     filter_backends = [SearchFilter, OrderingFilter]
-    search_fields = ["title", "description"]
+    search_fields = ["title", "detail"]
