@@ -4,6 +4,9 @@
         "**/*.pyc": {
             "when": "$(basename).py"
         },
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        "**/.todo_app_db": true,
+        "**/.pytest_cache": true,
+        "**/Pipfile.lock": true,
     }
 }
