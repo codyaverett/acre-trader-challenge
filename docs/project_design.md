@@ -1,22 +1,35 @@
 # Project Design
 
-This document is maintained to list out general project requirements, intents, and project structure.
+This document is maintained to list out general project requirements, intents, tools, and project structure.
+
+## Table of contents
+- [Project Design](#project-design)
+  - [Table of contents](#table-of-contents)
+  - [Frameworks](#frameworks)
+    - [Django](#django)
+    - [DjangoRestFramework](#djangorestframework)
+  - [Django Apps](#django-apps)
+    - [Todo_app](#todo_app)
 
 ## Frameworks
 
 ### Django
-As it was mentioned in the challenge prompt, I chose to use Django as my base application framework to demonstrate use
+I chose to use Django as my base application framework to demonstrate use
 
 ### DjangoRestFramework
-Along with Django, I chose to use the `djangorestframework` to simplify many desirable use cases and patterns.
+Along with Django, I chose to use the `djangorestframework` to simplify many desirable use cases and patterns for this challenge.
 
 - User Authentication and permissions
 - Serialization of data
 - OpenApi Schema generation
 
+It doesn't take much to get a fully functional todo application with this toolset.
+
 ## Django Apps
 
-### Todo
+### Todo_app
+
+The primary application for this demo.
 
 - Todo REST API
   - Get a list of todos

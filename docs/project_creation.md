@@ -1,6 +1,12 @@
 # Project Creation documentation
 
-Steps used to set up the project.  This document is intended to describe the steps taken to generate the inital Django project, setup the database, and super user for administration.
+NOTE ⚠️ 
+
+This document is preserved to show how the project was originally created, the database section mentions use of SQLite, which is the default database option for new Django projects.
+
+---
+
+Below are the steps to generate the inital Django project, setup the database, and super user for administration.
 
 ## Prerequisites
 
