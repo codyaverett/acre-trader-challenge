@@ -1,7 +1,7 @@
-from ..models import Todo
+from rest_framework import viewsets, permissions
+
 from ..serializers import TodoSerializer
-from rest_framework import viewsets
-from rest_framework import permissions
+from ..models import Todo
 
 
 class TodoViewSet(viewsets.ModelViewSet):
