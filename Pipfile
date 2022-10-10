@@ -10,6 +10,8 @@ psycopg2-binary = "*"
 django-debug-toolbar = "*"
 requests = "*"
 pytest-dotenv = "*"
+flask = "*"
+required-env = "*"
 
 [dev-packages]
 sphinx = "*"
