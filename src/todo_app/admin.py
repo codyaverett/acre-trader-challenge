@@ -1,13 +1,11 @@
 
 
-from collections import Counter
 from django.contrib import admin
 
-from todo_app.models.todo_list import TodoList
-from . import models
+from .models import Todo, TodoList
 
 
-@admin.register(models.Todo)
+@admin.register(Todo)
 class TodoAdmin(admin.ModelAdmin):
     list_display = ('title', 'detail', 'created_by',
                     'created_at', 'updated_at')
@@ -15,7 +13,7 @@ class TodoAdmin(admin.ModelAdmin):
     search_fields = ('title', 'detail')
 
 
-@admin.register(models.TodoList)
+@admin.register(TodoList)
 class TodoListAdmin(admin.ModelAdmin):
     list_display = ('title', 'todo_count', 'created_by', 'updated_at')
     list_filter = ('updated_at',)
