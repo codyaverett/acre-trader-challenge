@@ -1,5 +1,5 @@
-from rest_framework import viewsets
-from rest_framework import permissions
+from rest_framework import viewsets, permissions
+from rest_framework.filters import SearchFilter, OrderingFilter
 
 from ..models import TodoList
 from ..serializers import TodoListSerializer
@@ -15,3 +15,5 @@ class TodoListViewSet(viewsets.ModelViewSet):
     serializer_class = TodoListSerializer
     permission_classes = [permissions.IsAuthenticated]
     lookup_field = "id"
+    filter_backends = [SearchFilter, OrderingFilter]
+    search_fields = ["title"]
