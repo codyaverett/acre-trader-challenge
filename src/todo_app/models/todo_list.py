@@ -8,6 +8,7 @@ class TodoList(models.Model):
     """
     A todolist represents a collection of todos.
     """
+
     title = models.CharField(max_length=100)
     todo = models.ManyToManyField(Todo, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -18,4 +19,4 @@ class TodoList(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['title']
+        ordering = ["title"]

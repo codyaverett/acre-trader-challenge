@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('todo_app', '0002_alter_todo_created_by'),
+        ("todo_app", "0002_alter_todo_created_by"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='todolist',
-            name='created_at',
+            model_name="todolist",
+            name="created_at",
             field=models.DateTimeField(auto_now=True),
         ),
     ]
