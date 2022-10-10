@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('todo_app', '0003_todolist_created_at'),
+        ("todo_app", "0003_todolist_created_at"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='todo',
-            old_name='important',
-            new_name='is_important',
+            model_name="todo",
+            old_name="important",
+            new_name="is_important",
         ),
         migrations.AlterField(
-            model_name='todolist',
-            name='created_at',
+            model_name="todolist",
+            name="created_at",
             field=models.DateTimeField(auto_now_add=True),
         ),
     ]

@@ -8,5 +8,7 @@
         "**/.todo_app_db": true,
         "**/.pytest_cache": true,
         "**/Pipfile.lock": true,
-    }
+    },
+    "python.linting.enabled": false,
+    "python.analysis.typeCheckingMode": "off"
 }

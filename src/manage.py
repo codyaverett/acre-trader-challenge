@@ -9,10 +9,10 @@ def main():
     """Run administrative tasks."""
 
     # Load dotenv file from the project src directory
-    dotenv_file = path.join(path.join(path.dirname(__file__), '.env'))
+    dotenv_file = path.join(path.join(path.dirname(__file__), ".env"))
     load_dotenv(dotenv_file, override=True)
 
-    environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
+    environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -24,5 +24,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

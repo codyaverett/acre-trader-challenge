@@ -8,7 +8,7 @@ from os import environ
 
 
 def load_required_envars(required_envars: list) -> dict:
-    """ 
+    """
     Load required environment variables from .env file
     :param required_envars: list of required environment variables
     :return: dictionary of environment variables
@@ -21,7 +21,7 @@ def load_required_envars(required_envars: list) -> dict:
         try:
             envs[envar] = environ[envar]
         except KeyError as key:
-            print(f'Please define the environment variable {key}')
+            print(f"Please define the environment variable {key}")
             exit_on_complete = True
 
     if exit_on_complete:
