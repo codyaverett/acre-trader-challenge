@@ -9,11 +9,11 @@ app = Flask(__name__)
 
 # configure postgresql connection
 conn = Database(
-    host=dbConfig["POSTGRES_HOST"],
-    database=dbConfig["POSTGRES_DB"],
-    user=dbConfig["POSTGRES_USER"],
-    password=dbConfig["POSTGRES_PASSWORD"],
-    port=dbConfig["POSTGRES_PORT"],
+    host=dbConfig.POSTGRES_HOST,
+    database=dbConfig.POSTGRES_DB,
+    user=dbConfig.POSTGRES_USER,
+    password=dbConfig.POSTGRES_PASSWORD,
+    port=dbConfig.POSTGRES_PORT,
 )
 
 
