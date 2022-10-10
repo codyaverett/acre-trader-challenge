@@ -1,4 +1,5 @@
 import psycopg2
+import signal
 
 
 class Database:
@@ -7,9 +8,17 @@ class Database:
     """
 
     def __init__(self, host, database, user, password, port):
+        signal.signal(signal.SIGINT, self.close_connection)
+        signal.signal(signal.SIGTERM, self.close_connection)
         self.conn = psycopg2.connect(
             host=host, database=database, user=user, password=password, port=port
         )
+
+    def close_connection(self, *args):
+        print("Trying to close db connection.")
+        self.conn.close()
+        print("Connection closed.")
+        exit(1)
 
     def create_table(self):
         """Create the table"""
