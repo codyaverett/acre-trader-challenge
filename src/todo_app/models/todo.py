@@ -8,12 +8,12 @@ class Todo(models.Model):
     """
     title = models.CharField(max_length=100)
     detail = models.TextField(blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    completed_at = models.DateTimeField(null=True, blank=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    is_important = models.BooleanField(default=False)
     created_by = models.ForeignKey(
         User, on_delete=models.PROTECT, null=False, default=1)
-    important = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    completed_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.title

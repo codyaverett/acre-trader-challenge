@@ -1,0 +1,9 @@
+{
+    "workbench.editor.limit.excludeDirty": true,
+    "files.exclude": {
+        "**/*.pyc": {
+            "when": "$(basename).py"
+        },
+        "**/__pycache__": true
+    }
+}
