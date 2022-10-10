@@ -73,7 +73,12 @@ I am free to use any number of libraries and frameworks that I see fit to use.
 /api/v1/todos/<id>/
 /api/v1/todos/<id>\.<format>/
 /api/v1/todos\.<format>/
+/docs/
+/docs/schema.js
 ```
+
+After development setup, view the interactive docs for more detail.
+http://127.0.0.1:9001/docs/
 
 ## Development
 
@@ -117,6 +122,7 @@ From the `src/` directory run either:
 ### 6. Use the api and development tools
 
 - Browsable Api - http://127.0.0.1:9001/api/v1
+- Interactive Api Docs - http://127.0.0.1:9001/docs/
 - Django Admin - http://127.0.0.1:9001/admin/
 - Postgres Admin - http://127.0.0.1:5050/
 - [django_extensions](https://django-extensions.readthedocs.io/en/latest/) features are available through the `src/.manage.py` cli
