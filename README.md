@@ -91,7 +91,9 @@ Install `pipenv` if you don't already have it.
 pip install --user pipenv
 ```
 
-Then run `pipenv install --dev` anywhere in the project directory to install all the project dependencies and development dependencies.
+Run `pipenv install --dev` anywhere in the project directory to install all the project dependencies and development dependencies.
+
+Then run `pipenv shell` to place your shell into this pipenvs virutal context and enable use of the package dependencies we just installed.
 
 ### 2. Configure Project Environment Variables
 
